@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>The Norwich Testing Initiative</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+<div class = "banner">
+      <img src="logo-2.png" id="nti">
+    </div>
+</header>
+<nav><strong>
+  <a href="index.html">Home</a>  &nbsp
+  <a href="Teams.html">Team members</a>  &nbsp
+  <a href="Sign-up.html">Sign up</a>  &nbsp
+  <a href="Contact.html">Contact</a>  &nbsp
+  <a href="Advice.html">Advice</a>
+</strong></nav>
+<br>
+<main>
+  <p> Please fill in from below to sign up</P>
+<form action="" method="">
+  <fieldset>
+    <legend>Sign Up</legend>
+
+    <label for="Firstname">First Name:</label>
+    <br>
+      <input type="text" name="Fn" required>
+<br>
+    <label for="Lastname">Last Name:</label>
+    <br>
+      <input type="text" name="Ln" required>
+<br>
+    <label for="Email">Email Address:</label>
+    <br>
+      <input type="email" name="Ea" required>
+<br>
+    <label for="username">Username:</label>
+    <br>
+      <input type="text" name="Un" required>
+<br>
+    <label for="password">Password:</label>
+    <br>
+      <input type="text" name="Pwd" minlength="8" pattern="{1-9}" required>
+<br>
+    <label for="passwordRepeat">Repeat Password</label>
+    <br>
+       <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+<br>
+    <label for="phone">Phone Number:</label>
+    <br>
+      <input type="tel" name="Ph" placeholder="+44"pattern="[0-9]{11}" required>
+<br>
+    <label for="houenumber">House Number:</label>
+    <br>
+      <input type="text" name="Hn" required>
+<br>
+    <label for="postcode">Postcode:</label>
+    <br>
+      <input type="text" name="Pc" required>
+<br>
+    <label for="age">Date of Birth:</label>
+    <br>
+    <input type="date" name="Dob">
+<br>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender">
+    <label for="other">Other</label>
+<br>
+    <label for="ethinicity">Ethinicity:</label>
+      <select name="ethinicity" id="select" required>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Asian">Asian</option>
+        <option value="other">Other</option>
+      </select>
+<br>
+    <label for="comments">Comment:</label>
+    <textarea name="comments" input type='text' id=comments row='5' cols=40>
+    </textarea><br>
+    <button type="submit">Sign-up</button>
+</form>
+
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
