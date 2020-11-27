@@ -1,4 +1,5 @@
 
+
 html{
   font-size: 1em;
   font-family: Arial, sans-serif;
@@ -9,6 +10,7 @@ header{
   display:table;
   background-color:#1BB8E0;
   margin-bottom:50px;
+
 }
 #nti{
   position: relative;
@@ -16,7 +18,7 @@ header{
 }
 .banner{
   max-width: 400%;
-  height: auto;
+  height: 60px;
   left: 0px;
   right: 0px;
 }
@@ -79,9 +81,8 @@ label{
   margin-right: 10px;
   color: Black;
 }
-
-input{
-  width: 30%;
+#input{
+  width: 80%;
   text-align: left;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -90,3 +91,9 @@ input{
   background-color: #ddd;
   outline: none;
 }
+.column{
+  float: left;
+  width: 40%
+}
+
+button{float: }
