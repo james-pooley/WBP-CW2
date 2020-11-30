@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <script src="https://kit.fontawesome.com/eb1e9e6323.js" crossorigin="anonymous"></script>
+ <script src="toggle.js" defer></script>
  <title>The Norwich Testing Initiative</title>
  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <header>
-    <div class = "banner">
-      <img src="logo-2.png" id="nti">
-    </div>
-  </header>
-<nav>
-  <ul>
-    <li><a href="index.html"><i></i>Home</a></li>  &nbsp
-    <li><a href="Teams.html"><i></i>Team members</a></li>  &nbsp
-    <li><a href="Sign-up.html"><i></i>Sign up</a></li>  &nbsp
-    <li><a href="Contact.html"><i></i>Contact</a></li>  &nbsp
-    <li><a href="Advice.html"><i></i>Advice</a></li>
-  </ul>
-</nav>
-<main>
-<h2>Help Us Stop Coronavirus</h2>
-<p>NTS is a newly formed initative to help stop the spend of Covid-19<br>
-launching large-scale screening for SARS-CoV-2.<br>
-<a href="Sign-up.html">Sign up</a> to help save lives.
-</p>
-<h3>Start date</h3>
-<ul>
-<li>Monday 7 January 2021 </li>
-</ul>
 
+<header>
+   <nav class= "navbar">
+     <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+     </span>
+     <a href="#" class="navbar-brand"><img class="navbar-brand" src="New-Logo.png"></a>
+        <ul class= "main-nav" id="js-menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="Sign-up.html">Sign up</a>
+          </li>
+          <li>
+            <a href="Teams.html">Our team</a>
+          </li>
+          <li>
+            <a href="Contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="Advice.html">Advice</a>
+          </li>
+        </ul>
+    </nav>
+</header>
+<body>
+<main>
+    <img class="bg" src="coronavirus-test.jpg"/>
+    <h1>Help us stop the spread of COVID-19</h1>
+
+    <p>NTS is a newly formed initative to help stop the spread of Covid-19,
+    launching large-scale screening for SARS-CoV-2.</p>
+    <p>
+    <a id= "Signup" href="Sign-up.html">Sign up</a> to help save lives.
+    </p>
+    <h2>Start date : Monday 7 January 2021</h2>
 </main>
 <footer>
-
+  <div>Copyright ©2020 Norwich Testing Initiative<br/>
+			<a href="mailto:srp19ccu@uea.ac.uk">James Pooley</a>
+	</div>
+  <div>
+    <!-- Last modified footer script -->
+    <script>
+			document.write("This page was last modified on : " + document.lastModified);
+		</script>
+  </div>
 </footer>
 </body>
 </html>
