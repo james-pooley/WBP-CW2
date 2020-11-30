@@ -5,26 +5,40 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="sign-up.css">
 <script src="email.js" defer></script>
+<script src="https://kit.fontawesome.com/eb1e9e6323.js" crossorigin="anonymous"></script>
+<script src="toggle.js" defer></script>
 </head>
 <body>
-<img src="images/logo-2.png" id="nti">
 <header>
-  <div class="banner">
-  </div>
+   <nav class= "navbar">
+     <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+     </span>
+     <a href="#" class="navbar-brand"><img class="navbar-brand" src="New-Logo.png"></a>
+        <ul class= "main-nav" id="js-menu">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="Sign-up.html">Sign up</a>
+          </li>
+          <li>
+            <a href="Teams.html">Our team</a>
+          </li>
+          <li>
+            <a href="Contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="Advice.html">Advice</a>
+          </li>
+        </ul>
+    </nav>
 </header>
-<nav><strong>
-  <a href="index.html">Home</a>  &nbsp
-  <a href="Teams.html">Team members</a>  &nbsp
-  <a href="Sign-up.html">Sign up</a>  &nbsp
-  <a href="Contact.html">Contact</a>  &nbsp
-  <a href="Advice.html">Advice</a>
-</strong></nav>
-<br>
 <main>
   <p> Please fill in from below to sign up</P>
 <form action="" method="">
   <fieldset>
-    <legend>Sign Up</legend>
+    <legend>Sign Up</legend><br>
     <div class="column">
     <label for="Firstname">First Name:</label>
     <br>
@@ -99,7 +113,15 @@
 
 </main>
 <footer>
-
+  <div>Copyright ©2020 Norwich Testing Initiative<br/>
+			<a href="mailto:srp19ccu@uea.ac.uk">James Pooley, Ryan Hughes, Matthew Pretty, Toby Butler</a>
+	</div>
+  <div>
+    <!-- Last modified footer script -->
+    <script>
+			document.write("This page was last modified on : " + document.lastModified);
+		</script>
+  </div>
 </footer>
 </body>
 </html>
