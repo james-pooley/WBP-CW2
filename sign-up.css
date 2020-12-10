@@ -109,6 +109,7 @@ label{
   outline: none;
 }
 .column{
+  padding: 15px;
   float: left;
   width: 40%
 }
@@ -124,7 +125,18 @@ p{
   padding: 30px;
 }
 
-button{float: }
+button{float:
+  border: none;
+   color: white;
+   padding: 15px 30px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 20px;
+   margin: 6px 4px;
+   cursor: pointer;
+background-color: #112d4e;
+}}
 
 footer{
   background-color: #3f72af;
