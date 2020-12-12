@@ -1,0 +1,173 @@
+/* contact.css */
+
+html{
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dbe2ef;
+  color: #112d4e;
+  font-family: "Roboto",sans-serif;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+.navbar {
+  font-size: 18px;
+  background-color: #112d4e;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+.navbar-brand{
+  max-width: 140px;
+  margin-top: 5px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+.bg{
+  width: 100%;
+  z-index: 0;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.active {
+  display: block;
+}
+.nav-links,
+.logo{
+  text-decoration: none;
+  color:  rgba(255, 255, 255, 0.7);
+}
+.navbar-toggle {
+    margin-top: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.main-nav li a{
+    color: #FFF;
+    font-size: 22px;
+}
+.main-nav li a:hover{
+    color: #3f72af;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+h1{
+  padding: 30px;
+  font-size: 70px;
+}
+h2{
+  padding: 30px;
+  font-size: 30px;
+}
+p{
+  padding: 30px;
+}
+
+main{
+  padding: 10px;
+}
+
+
+footer{
+  background-color: #3f72af;
+  text-align: center;
+	font-size: 0.4em;
+  padding: 10px;
+}
+form{
+  width: 100%;
+  padding: 2px;
+  width: 505;
+  height: 800px;
+}
+legend{
+  color: black;
+}
+label{
+  margin-right: 10px;
+  color: Black;
+}
+#input{
+  width: 80%;
+  text-align: left;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background-color: #ddd;
+  outline: none;
+}
+.column{
+  float: left;
+  width: 40%
+}
+
+button{float: }
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-links:hover {
+        color: #1f6f8b;
+    }
+}

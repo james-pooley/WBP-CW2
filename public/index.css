@@ -1,0 +1,218 @@
+/* index.css */
+/* Wtritten by James Pooley */
+
+
+html{
+  font-size: 40px;
+  font-family: Arial , sans-serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #dbe2ef;
+  color: #112d4e;
+  font-family: "Roboto",sans-serif;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+.navbar {
+  font-size: 18px;
+  background-color: #112d4e;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+.navbar-brand{
+  max-width: 140px;
+  margin-top: 5px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+.bg{
+  width: 100%;
+  z-index: 0;
+}
+.container {
+  max-width: 1440px;
+  text-align: center;
+  margin: auto;
+  min-height: 1px;
+}
+.active {
+  display: block;
+}
+.nav-links,
+.logo{
+  text-decoration: none;
+  color:  #000;
+}
+.navbar-toggle {
+    margin-top: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.8);
+
+}
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.main-nav li a{
+    color: #FFF;
+    font-size: 22px;
+}
+.main-nav li a:hover{
+    color: #3f72af;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.wrapper{
+
+  text-align: center;
+}
+.wrapper h1{
+  font-size: 48px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+
+/* Teams page code obtained from https://www.youtube.com/watch?v=ceIXv1Ykb_U
+      and modified to fit out site */
+}
+.team{
+  min-height: 100vh;
+  padding: 60px 15px;
+  background-color: #FFF;
+  float: left;
+  width: 100%;
+}
+.team h1{
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFF;
+  margin: 0;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.team .card{
+  width: 25%;
+  float: left;
+  padding: 0px 15px;
+}
+.team .card .box{
+  padding: 15px;
+  background-color: #112d4e;
+  border-radius: 5px;
+  transition: margin 1s ease, box-shadow 1s ease;
+}
+.team .card .box:hover{
+  margin-top: -15px;
+  box-shadow:0px 0px 40px black;
+}
+.team .card .box img{
+  width:150px;
+  display:block;
+  margin: 10px auto;
+  border-radius: 50%;
+}
+.team .card .box h3{
+  font-size: 30px;
+  margin: 20px 0px 10px;
+  color: #FFF;
+  text-align: center;
+}
+.team .card .box h4{
+	font-size:16px;
+	font-weight: 600;
+	color:#b9b9b9;
+	margin:0px 0px 15px;
+	text-align: center;
+}
+.team .card .box p{
+	color:#b9b9b9;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	padding:0px 20px;
+}
+h1{
+  padding: 30px;
+  font-size: 70px;
+}
+h2{
+  padding: 30px;
+  font-size: 30px;
+}
+p{
+  padding: 30px;
+}
+
+footer{
+  background-color: #3f72af;
+  text-align: center;
+	font-size: 0.4em;
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+        color: #000;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+    .nav-links:hover {
+        color: #3f72af;
+    }
+}
+@media screen and (max-width: 991px){
+	.team .card{
+		width:50%;
+		margin-bottom:30px;
+	}
+}
+@media screen and (max-width:550px){
+	.team .card{
+		width:100%;
+	}
+}
