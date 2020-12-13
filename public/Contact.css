@@ -6,9 +6,9 @@ html{
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body{
   margin-left: auto;
@@ -96,14 +96,6 @@ main{
   padding: 10px;
 }
 
-
-footer{
-  background-color: #112d4e;
-  text-align: center;
-	font-size: 0.4em;
-  padding: 10px;
-  color: White;
-}
 form{
   width: 100%;
   padding: 2px;
@@ -117,8 +109,9 @@ label{
   margin-right: 10px;
   color: Black;
 }
+
 #input{
-  width: 80%;
+  width: 100%;
   text-align: left;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -131,6 +124,16 @@ label{
   float: left;
   width: 40%
 }
+
+footer{
+  background-color: #112d4e;
+  color: #FFF;
+  text-align: center;
+	font-size: 0.4em;
+  padding: 10px;
+  position: static;
+}
+
 
 button{float: }
 @media screen and (min-width: 768px) {

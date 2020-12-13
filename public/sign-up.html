@@ -1,119 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>The Norwich Testing Initiative</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width = device-width, initial-scale=1.0">
-<script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
-<link rel="stylesheet" href="sign-up.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/eb1e9e6323.js" crossorigin="anonymous"></script>
-<!-- <script src="index.js" defer></script> -->
+  <!-- Link to icon used in the navigation bar -->
+  <script src="https://kit.fontawesome.com/eb1e9e6323.js" crossorigin="anonymous"></script>
+  <!-- Link to local javascript file to toggle responsive navigation bar -->
+  <script src="toggle.js" defer></script>
+  <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <!-- Main title -->
+  <title>The Norwich Testing Initiative</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- link to sign-up CSS page  -->
+  <link rel="stylesheet" href="sign-up.css">
+  <!-- Liink to access google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-   <nav class= "navbar">
-     <span class="navbar-toggle" id="js-navbar-toggle">
-            <i class="fas fa-bars"></i>
-     </span>
-     <a href="index.html" class="navbar-brand"><img class="navbar-brand" src="images/New-Logo.png"></a>
-        <ul class= "main-nav" id="js-menu">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="Sign-up.html">Sign up</a>
-          </li>
-          <li>
-            <a href="Teams.html">Our team</a>
-          </li>
-          <li>
-            <a href="Contact.html">Contact</a>
-          </li>
-          <li>
-            <a href="Advice.html">Advice</a>
-          </li>
-        </ul>
-    </nav>
-</header>
+
+  <header>
+    <!-- Top Navigation bar -->
+     <nav class= "navbar">
+       <span class="navbar-toggle" id="js-navbar-toggle">
+              <i class="fas fa-bars"></i>
+       </span>
+       <!-- Insert navigation bar logo -->
+       <a href="index.html" class="navbar-brand"><img class="navbar-brand" src="images/New-Logo.png"></a>
+          <!-- List navigation items -->
+          <ul class= "main-nav" id="js-menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="Sign-up.html">Sign up</a>
+            </li>
+            <li>
+              <a href="Teams.html">Our team</a>
+            </li>
+            <li>
+              <a href="Contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="Advice.html">Advice</a>
+            </li>
+          </ul>
+      </nav>
+  </header>
+
 <main>
-  <p> Please fill in from below to sign up</P>
-<form method="#" id="ntiForm" class="Sign-up-form" action="/submit-form">
-  <fieldset>
-    <legend>Sign Up</legend><br>
-    <div class="column">
-    <label for="firstname">First Name:</label>
-    <br>
-      <input type="text" class = "firstName" name="firstname" placeholder="Enter Firstname" id="input" box>
-      <br>
-    <label for="lastname">Last Name:</label>
-    <br>
-      <input type="text"class = "lastName" name="lastname" placeholder="Enter Lastname" id="input" >
-      <br>
-    <label for="email">Email Address:</label>
-    <br>
-      <input type="email" class = "email" name="email" placeholder="Enter Email" id="input" >
-      <br>
-    <label for="username">Username:</label>
-    <br>
-      <input type="text" class = "username" name="username" placeholder="Enter Username" id="input" >
-      <br>
-    <label for="password">Password:</label>
-    <br>
-      <input type="password" class = "password" name="password" placeholder="Enter Password" minlength="8" pattern="{1-9}" id="input" >
-      <br>
-    <label for="passwordrepeat">Repeat Password</label>
-    <br>
-       <input type="password" class = "passwordRepeat" placeholder="Repeat Password" name="passwordrepeat"  id="input" >
-       <br>
-     </div>
-     <div class="column">
-    <label for="telephone">Phone Number:</label>
-    <br>
-      <input type="tel" class = "telephone" name="telephone" placeholder="+44" pattern="[0-9]{11}" id="input" >
-      <br>
-    <label for="housenumber">House Number:</label>
-    <br>
-      <input type="text" class = "houseNumber" name="housenumber" placeholder="Enter House Number" id="input" >
-      <br>
-    <label for="postcode">Postcode:</label>
-    <br>
-      <input type="text" class = "postCode" name="postcode" id="input" placeholder="Enter Postcode" >
-      <br>
-    <label for="age">Date of Birth:</label>
-    <br>
-    <input type="date" class = "dateOfBirth" name="age" id="input">
-    <br>
-    <br>
-    <label for="gender" name="Gen">Gender:</label>
-    <input type="radio" id="male" name="gender">
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender">
-    <label for="female">Female</label>
-    <input type="radio" id="other" name="gender">
-    <label for="other">Other</label>
-    <br>
-    <br>
-    <label for="ethinicity">Ethinicity:</label>
-      <select name="ethinicity" id="select" >
-        <option value="White">White</option>
-        <option value="Black">Black</option>
-        <option value="Asian">Asian</option>
-        <option value="other">Other</option>
-      </select>
-    <br>
-    <br>
-    <label for="comments">Comment:</label>
-    <textarea name="comments" input type='text' id="comments" row='10' cols=40>
-    </textarea>
-    <br>
-    <br>
-    <button type="submit" id  ="button" >Sign-up</button>
-    <button type="reset" id = "cancel" >Cancel</button>
-         </div>
-  </fieldset>
-</form>
+  <div class="container">
+  <h1> Please fill in the form below to sign up for NTI testing.</h1>
+  <!-- Create form with POST method -->
+  <form method="POST" id="ntiForm" class="Sign-up-form" action="/submit-form">
+    <fieldset>
+
+      <legend>Sign Up</legend><br>
+
+      <div class="column">
+
+      <!-- Create input boxs for entry -->
+      <label for="firstname">First Name:</label>
+        <br>
+        <input
+        type="text"
+        class = "firstName"
+        name="firstname"
+        placeholder="Enter First name"
+        id="input"
+        required>
+        <br>
+
+      <label for="lastname">Last Name:</label>
+        <br>
+        <input
+        type="text"
+        class = "lastName"
+        name="lastname"
+        placeholder="Enter Last name"
+        id="input"
+        required>
+        <br>
+
+      <label for="email">Email Address:</label>
+        <br>
+        <input
+        type="email"
+        class = "email"
+        name="email"
+        placeholder="Enter Email"
+        id="input"
+        required>
+        <br>
+
+      <label for="username">Username:</label>
+        <br>
+        <input
+        type="text"
+        class = "username"
+        name="username"
+        placeholder="Enter Username"
+        id="input"
+        required>
+        <br>
+
+      <label for="password">Password:</label>
+        <br>
+        <input type="password"
+        class = "password"
+        name="password"
+        placeholder="Enter Password"
+        minlength="8"
+        pattern="{1-9}"
+        id="input"
+        required>
+        <br>
+
+      <label for="passwordrepeat">Repeat Password:</label>
+        <br>
+        <input type="password"
+        class = "passwordRepeat"
+        placeholder="Enter Repeat Password"
+        name="passwordrepeat"
+        id="input"
+        required>
+        <br>
+        </div>
+
+      <div class="column">
+
+      <label for="telephone">Phone Number:</label>
+        <br>
+        <input
+        type="tel"
+        class = "telephone"
+        name="telephone"
+        placeholder="+44"
+        pattern="[0-9]{11}"
+        id="input"
+        required>
+        <br>
+
+      <label for="housenumber">House Number:</label>
+        <br>
+        <input
+        type="text"
+        class = "houseNumber"
+        name="housenumber"
+        placeholder="Enter House Number"
+        id="input"
+        required>
+        <br>
+
+      <label for="postcode">Postcode:</label>
+        <br>
+        <input
+        type="text"
+        class = "postCode"
+        name="postcode"
+        id="input"
+        placeholder="Enter Postcode"
+        required>
+        <br>
+
+      <label for="dob">Date of Birth:</label>
+        <br>
+        <input
+        type="date"
+        class = "dateOfBirth"
+        name="dob"
+        id="input"
+        required>
+        <br>
+
+      <!-- Create radio butttons for Gender -->
+      <label for="gender" name="Gen">Gender:</label>
+        <input
+        type="radio"
+        id="male"
+        name="gender">
+
+      <label for="male">Male</label>
+        <input
+        type="radio"
+        id="female"
+        name="gender">
+
+      <label for="female">Female</label>
+        <input
+        type="radio"
+        id="other"
+        name="gender">
+
+      <label for="other">Other</label>
+        <br>
+
+      <!-- Create drop down for ethnicity -->
+        <br>
+        <label for="ethnicity">Ethnicity:</label>
+          <select name="ethnicity" id="select" required >
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Asian">Asian</option>
+            <option value="other">Other</option>
+          </select>
+        <br>
+
+        <br>
+      <label for="dot">Date of test:</label>
+        <br>
+        <input
+        type="date"
+        class = "dateOfTest"
+        name="dot"
+        id="input"
+        required>
+        <br>
+
+        <label for="slot">Test slot:</label>
+          <select name="slot" id="select" required >
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+          </select>
+        <br>
+        <!-- Create text feild for comments section -->
+        <br>
+      <label for="comments">Comments:</label>
+        <textarea
+        name="comments"
+        input type='text'
+        id="comments"
+        row='10'
+        cols=40>
+        </textarea>
+        <br>
+        <br>
+
+        <button type="submit" id  ="button" >Sign up</button>
+           </div>
+    </fieldset>
+  </form>
+</div>
 </main>
 
 <script>
@@ -169,6 +298,7 @@
 
 
 <footer>
+  <!-- Show copyright label, and list names of programmers -->
   <div>Copyright ©2020 Norwich Testing Initiative<br/>
 			<a href="mailto:srp19ccu@uea.ac.uk">James Pooley, Ryan Hughes, Matthew Pretty, Toby Butler</a>
 	</div>

@@ -1,7 +1,7 @@
 /* sign-up.css */
 
 html{
-  font-size: 25px;
+  font-size: 30px;
   font-family: Arial , sans-serif;
 }
 * {
@@ -13,7 +13,6 @@ body{
   margin-left: auto;
   margin-right: auto;
   background-color: #dbe2ef;
-  color: #112d4e;
   font-family: "Roboto",sans-serif;
 }
 nav ul li a {
@@ -39,9 +38,11 @@ nav ul li a {
   z-index: 0;
 }
 .container {
+  border-radius: 5px;
   position: relative;
-  text-align: center;
+  text-align: left;
   color: white;
+  padding: 20px;
 }
 .active {
   display: block;
@@ -52,39 +53,44 @@ nav ul li a {
   color:  rgba(255, 255, 255, 0.7);
 }
 .navbar-toggle {
-    margin-top: 40px;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255,255,255,0.8);
-    font-size: 24px;
+  margin-top: 40px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  font-size: 24px;
 }
 .main-nav li {
-    text-align: center;
-    margin: 15px auto;
+  text-align: center;
+  margin: 15px auto;
 }
 .main-nav li a{
-    color: #FFF;
-    font-size: 22px;
+  color: #FFF;
+  font-size: 22px;
 }
 .main-nav li a:hover{
-    color: #3f72af;
+  color: #3f72af;
 }
 .logo {
-    display: inline-block;
-    font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
-
-
 main{
 }
 
+footer{
+  background-color: #3f72af;
+  text-align: center;
+	font-size: 0.4em;
+  padding: 10px;
+  position: relative;
+}
 form{
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   width: 505;
   height: 800px;
 }
@@ -93,16 +99,17 @@ legend{
 }
 label{
   margin-right: 10px;
-  color: Black;
+  color: #112d4e;
 }
 #input{
   width: 80%;
   text-align: left;
-  padding: 15px;
-  margin: 5px 22px 0;
+  font-size: 15px;
+  margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+  background-color: #dbe2ef;
   outline: none;
 }
 .column{
@@ -112,7 +119,8 @@ label{
 }
 h1{
   padding: 30px;
-  font-size: 70px;
+  font-size: 50px;
+  color: #112d4e;
 }
 h2{
   padding: 30px;
@@ -130,50 +138,56 @@ button{float:
    text-decoration: none;
    display: inline-block;
    font-size: 20px;
-   margin: 5px 4px;
+   margin: 6px 4px;
    cursor: pointer;
-background-color: #112d4e;
+   background-color: #112d4e;
 }
 
 footer{
   background-color: #112d4e;
+  color: #FFF;
+  bottom: 0;
   text-align: center;
-font-size: 0.4em;
+	font-size: 0.4em;
   padding: 10px;
-  color: White;
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  height:50px;
+  clear:both;
 }
 @media screen and (min-width: 768px) {
     .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-        padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
+      padding: 15px;
     }
 
     .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
     }
 
     .main-nav li {
-        margin: 0;
-        padding: 20px;
+      margin: 0;
+      padding: 20px;
     }
 
     .nav-links {
-        margin-left: 40px;
+      margin-left: 40px;
     }
 
     .logo {
-        margin-top: 0;
+      margin-top: 0;
     }
 
     .navbar-toggle {
-        display: none;
+      display: none;
     }
 
     .logo:hover,
