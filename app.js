@@ -1,73 +1,67 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
 
-const http = require('http');
-
-// Use public as directory to host files
+// static file location
 app.use(express.static('public'));
 
+// us fs to enable interaction with File System
 const fs = require('fs');
-const port = 3000;
-const {body, validationResult} = require('express-validator');
 
-// Listen local host at 3000
-app.listen(3000, () => console.log('Listening at 3000'));
+//  Helper
+const bodyParser = require('body-parser'); /// body parser = html pass
 
-app.get('/submit-form', function(req, res){
-   res.render('form');
+const jsonParser = bodyParser.json();
+
+const path = require('path');
+
+// Landing page
+app.get('/', (req, res) => {
+  res.send('This is a temporary page \n');
 });
 
-
-// let user = {
-//   firstname: "James",
-//   lastname: "Pooley",
-//   email: "jamespooley56@hotmail.co.uk",
-//   username: "JAMESPOOLEY",
-//   password: "BABABABA",
-//   passwordrepeat: "BABABABA",
-//   telephone: "012345678",
-//   housenumber: "17",
-//   dob: "09/08/2000",
-//   gender: "Male",
-//   ethnicity: "White",
-//   dot: "09/08/2020",
-//   slot: "Morning",
-//   comments: "abcdefghij"
-// };
-//
-// let data = JSON.stringify(user);
-
-// fs.writeFileSync('file.json', data, finished);
-
-function finished(err)
-{
-  console.log('success');
-}
+// Use public as directory to host files
 
 
-// app.use(express.urlencoded());
-// // parse application to json
-// app.use(express.json());
+app.engine('html', require('ejs').renderFile);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');
+
+const { body, validationResult } = require('express-validator');
+
+app.post('/user', [
+  // email must be Email
+  body('email').isEmail(),
+  // password must be at least 8 chars long
+  body('password').isLength({min : 8}),
+  // password repeat must be at least 8 chars long
+  body('passwordrepeat').isLength({min : 8}),
+])
 
 
-app.post('/submit-form', (req, res) => {
-  const firstname = req.body.firstname
-  const lastname = req.body.lastname
-  const email = req.body.email
-  const username = req.body.username
-  const password = req.body.password
-  const passwordrepeat = req.body.passwordrepeat
-  const telephone = req.body.telephone
-  const housenumber = req.body.housenumber
-  const age = req.body.age
-  const gender = req.body.gender
-  const ethnicity = req.body.ethnicity
-  const dot = req.body.dot
-  const slot = req.body.slot
-  const comments = req.body.comments
-  res.end()
-  response = {
+//Middleware Setup
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.post('/submit-form', function(req, res) {  //POST method
+  console.log(req.body);
+  var firstname = req.body.firstname;
+  var lastname = req.body.lastname;
+  var email = req.body.email;
+  var username = req.body.username;
+  var password = req.body.password;
+  var passwordrepeat = req.body.passwordrepeat;
+  var telephone = req.body.telephone;
+  var housenumber = req.body.housenumber;
+  var age = req.body.age;
+  var gender = req.body.gender;
+  var ethnicity = req.body.ethnicity;
+  var dot = req.body.dot;
+  var slot = req.body.slot;
+  var comments = req.body.comments;
+
+
+  var response = {
     firstname: firstname,
     lastname: lastname,
     email: email,
@@ -83,63 +77,31 @@ app.post('/submit-form', (req, res) => {
     slot: slot,
     comments: comments
   }
-})
 
-// fetch('/submit-form', {
-//   method: 'POST',
-//   headers: {
-//     'content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({
-//     user: {
-//       firstname: "James",
-//       lastname: "Pooley",
-//       email: "jamespooley56@hotmail.co.uk",
-//       username: JAMESPOOLEY,
-//       password: BABABABA,
-//       passwordrepeat: BABABABA,
-//       telephone: 012345678,
-//       housenumber: 17,
-//       agae: 20,
-//       gender: Male,
-//       ethinicity: White,
-//       comments: abcdefghij
-//     }
-//   })
-// });
+
+  var file = 'user_data.json'; // File var
 
 
 
+      // look for file if it doesn't exist create and add response, if exists Append
+      fs.readFile(file, (err, data) => {
+      if (err && err.code === "ENOENT") {
+          return fs.writeFile(file, JSON.stringify(response), error => console.error);
 
-// app.use(express.static('public'));
-// const bodyParser = require('body-parser');
-// const jsonParser = bodyParser.json();
-//
-//
-//
-// const http = require('http');
-// const hostname = "127.0.0.1";
-// const port = 3000;
-//
-// const server = http.createServer(function (req, res) {
-//   res.statusCode = 200;
-//   req.on('data', function (data) {
-//     //handle data as it is received... for POST requests
-//   });
-//   req.on('end', function () {
-//     res.setHeader('Content-Type', 'application/json');
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.writeHead(200, 'OK');
-//
-//     res.end('{ "data": "just a plain old json reply" }');
-//   });
-// });
-//
-//
-// server.listen(3000, (err) => {
-//   if (err) {
-//     console.log('bad things');
-//     return;
-//   }
-//   console.log('listening on port 3000');
-// });
+      }
+
+          else {
+            try {
+                  return fs.appendFile(file, JSON.stringify(response), error => console.error)
+        } catch(exception) {
+            console.error(exception);
+        }
+         console.log('File exists');
+     }
+   });
+
+});
+
+
+///start
+app.listen(3000, () => console.log('Listening on port 3000'));
