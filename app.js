@@ -26,6 +26,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
+const { body, validationResult } = require('express-validator');
 
 app.post('/user', [
   // email must be Email
@@ -82,7 +83,7 @@ app.post('/submit-form', function(req, res) {  //POST method
 
 
 
-      // look for file if it doesn't exist create and add response, if exists Append
+      // look for file if it doesn't  and add response, if exists Append
       fs.readFile(file, (err, data) => {
       if (err && err.code === "ENOENT") {
           return fs.writeFile(file, JSON.stringify(response), error => console.error);
@@ -99,8 +100,15 @@ app.post('/submit-form', function(req, res) {  //POST method
      }
    });
 
+
+
+
+
+
+
+
 });
 
 
-///start
+
 app.listen(3000, () => console.log('Listening on port 3000'));
