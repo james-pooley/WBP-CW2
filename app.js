@@ -26,7 +26,6 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
-const { body, validationResult } = require('express-validator');
 
 app.post('/user', [
   // email must be Email
